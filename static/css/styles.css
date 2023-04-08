@@ -1,0 +1,24 @@
+/* body element styling/common color styling/ misc elements */
+
+body {
+}
+
+.gray-background-color {
+  background-color: #5a5a5a;
+}
+
+.white-text-color {
+  color: white;
+}
+
+.yellow-green-background-color {
+  background-color: #e1e723;
+}
+
+.black-text-color {
+  color: black;
+}
+
+ul li {
+  list-style-type: none;
+}
