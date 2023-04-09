@@ -29,8 +29,8 @@
     >
       <h5>Cory's Tools</h5>
     </div>
-    <div class="yellow-green-background-color">
-      <nav>
+    <div class="yellow-green-background-color d-flex flex-row">
+      <nav class="d-flex flex-row">
         <ul class="d-flex flex-row pt-3 pb-3">
           <li>
             <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
@@ -47,9 +47,53 @@
               >Login</a
             >
           </li>
+          <li>
+            <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
+              >Battery List</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
     {% block content %} {% endblock %}
+    <div>
+      <footer>
+        <div
+          class="gray-background-color pt-4 pb-4 white-text-color d-flex flex-column align-items-center"
+        >
+          <p class="mb-0">Cory's Tools</p>
+          <p class="mb-0">Go Ryobi Tools!</p>
+          <p class="mb-0">
+            <a class="text-decoration-none" href="emailto:cory@corycox.com"
+              >Email Me!</a
+            >
+          </p>
+        </div>
+        <div class="yellow-green-background-color pt-3 pb-3">
+          <ul class="d-flex flex-row justify-content-center">
+            <li>
+              <a class="nav-text text-decoration-none ps-2 pe-2" href=""
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
+                >Tool List</a
+              >
+            </li>
+            <li>
+              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
+                >Battery List</a
+              >
+            </li>
+            <li>
+              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

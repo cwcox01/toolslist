@@ -19,6 +19,15 @@ body {
   color: black;
 }
 
+/* setting styles for navbar on top and footer */
+
 ul li {
   list-style-type: none;
+}
+li a {
+  color: black;
+}
+
+li a:hover {
+  color: #5a5a5a;
 }
