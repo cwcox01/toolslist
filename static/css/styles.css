@@ -1,22 +1,29 @@
+:root {
+  --colorYellow: #e1e723;
+  --colorBlack: black;
+  --colorGray: #5a5a5a;
+  --colorWhite: white;
+}
+
 /* body element styling/common color styling/ misc elements */
 
 body {
 }
 
 .gray-background-color {
-  background-color: #5a5a5a;
+  background-color: var(--colorGray);
 }
 
 .white-text-color {
-  color: white;
+  color: var(--colorWhite);
 }
 
 .yellow-green-background-color {
-  background-color: #e1e723;
+  background-color: var(--colorYellow);
 }
 
 .black-text-color {
-  color: black;
+  color: var(--colorBlack);
 }
 
 /* setting styles for navbar on top and footer */
@@ -25,9 +32,15 @@ ul li {
   list-style-type: none;
 }
 li a {
-  color: black;
+  color: var(--colorBlack);
 }
 
 li a:hover {
-  color: #5a5a5a;
+  color: var(--colorGray);
+}
+
+/* home page styling */
+
+.home-page-content {
+  padding: 2rem 2rem;
 }
