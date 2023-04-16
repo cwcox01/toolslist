@@ -44,3 +44,51 @@ li a:hover {
 .home-page-content {
   padding: 2rem 2rem;
 }
+
+.text-with-border {
+  font-family: sans-serif;
+  margin: 100px auto;
+  color: var(--colorBlack);
+  text-align: center;
+  font-size: 30px;
+  max-width: 600px;
+  position: relative;
+}
+.text-with-border:before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 5px;
+  background: #191970;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+.text-with-border:after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 5px;
+  background: #191970;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+
+/* setting media query for site */
+
+@media screen and (max-width: 700px) {
+  /* home page media query styling */
+
+  .text-with-border {
+    font-size: 20px;
+  }
+
+  .text-with-border:before {
+    width: 85px;
+  }
+
+  .text-with-border:after {
+    width: 85px;
+  }
+}
