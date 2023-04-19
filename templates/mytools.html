@@ -1,8 +1,17 @@
-<html>
-  <head>
-    <title>Tools Page</title>
-  </head>
-  <body>
-    <h1>Welcome to a list of the tools I own.</h1>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+<!--protect-->
+{% block title %}<title>Cory's Tools</title>{% endblock %}
+
+<!--protect-->
+{% block content %}
+<div>
+  <h2>Cory's Tools</h2>
+
+  <!--protect-->
+  {% for tool in tools %}
+  <p>{{ tool.brand }}</p>
+  <p>{{ tool.tool_type }}</p>
+  {% endfor %}
+</div>
+{% endblock %}
