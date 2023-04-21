@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+<!--protect-->
+{% block title %}<title>Cory's Batteries</title>{% endblock %}
+
+<!--protect-->
+{% block content %}
+<div class="pb-5 pt-5 ps-5 my-tools-section">
+  <h2>Cory's Batteries</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Volts</th>
+        <th>Amps</th>
+        <th>Amount</th>
+        <th>High Performance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--protect-->
+      {% for battery in battery %}
+      <tr>
+        <td>{{ battery.brand }}</td>
+        <td>{{ battery.voltage }}</td>
+        <td>{{ battery.amperage }}</td>
+        <td>{{ battery.quantity }}</td>
+        <td>{{ battery.performance_choice }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

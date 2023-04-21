@@ -45,16 +45,37 @@
               >Tool List</a
             >
           </li>
+          {% if user.is_authenticated %}
           <li>
-            <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Add Items</a
+            <a
+              href="{% url 'profile' %}"
+              class="text-decoration-none ps-2 pe-2 black-text-color"
+              >{{ user.username }}</a
             >
           </li>
           <li>
-            <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
+            <a
+              href="{% url 'logout' %}"
+              class="text-decoration-none ps-2 pe-2 black-text-color"
+              >Logout</a
+            >
+          </li>
+          {% else %}
+          <li>
+            <a
+              href="{% url 'login' %}"
+              class="text-decoration-none ps-2 pe-2 black-text-color"
               >Login</a
             >
           </li>
+          <li>
+            <a
+              href="{% url 'register' %}"
+              class="text-decoration-none ps-2 pe-2 black-text-color"
+              >Register</a
+            >
+          </li>
+          {% endif %}
           <li>
             <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
               >Battery List</a

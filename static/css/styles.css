@@ -7,9 +7,6 @@
 
 /* body element styling/common color styling/ misc elements */
 
-body {
-}
-
 .gray-background-color {
   background-color: var(--colorGray);
 }
@@ -39,6 +36,27 @@ li a:hover {
   color: var(--colorGray);
 }
 
+/* tool and batery table page styling  */
+
+table {
+  width: 80%;
+}
+
+table,
+th,
+td {
+  border-top: 1px solid;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+tr:hover {
+  background-color: var(--colorYellow);
+}
+
 /* home page styling */
 
 .home-page-content {
@@ -60,7 +78,7 @@ li a:hover {
   display: block;
   width: 180px;
   height: 5px;
-  background: #191970;
+  background: var(--colorYellow);
   left: 0;
   top: 50%;
   position: absolute;
@@ -71,7 +89,7 @@ li a:hover {
   display: block;
   width: 180px;
   height: 5px;
-  background: #191970;
+  background: var(--colorYellow);
   right: 0;
   top: 50%;
   position: absolute;
@@ -92,5 +110,12 @@ li a:hover {
 
   .text-with-border:after {
     width: 85px;
+  }
+
+  /* my tools media query styling */
+
+  th,
+  td {
+    padding: 0.5rem;
   }
 }

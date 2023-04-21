@@ -1,5 +1,8 @@
 from django.db import models
 from django.shortcuts import render
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -26,3 +29,12 @@ class Battery(models.Model):
                                           max_length=1, help_text="Select yes if high performance battery.", choices=HIGH_PERFORMANCE)
     quantity = models.IntegerField(default=0, blank=False)
     description = models.CharField(default="", max_length=150)
+
+
+class RegistrationForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, required=True,
+                             help_text='Required. Enter a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
