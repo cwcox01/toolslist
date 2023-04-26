@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 
 <!--protect-->
+{% block title%}
+<title>Login</title>
+{% endblock %}
+
+<!--protect-->
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  <div class="form-group">
-    <label for="username">Username:</label>
-    <input type="text" class="form-control" id="username" name="username" />
-  </div>
-  <div class="form-group">
-    <label for="password">Password:</label>
-    <input type="password" class="form-control" id="password" name="password" />
-  </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+<div class="pb-5 pt-4 w-25 form-ryobi">
+	<h2>Login</h2>
+	<form method="post">
+		{% csrf_token %}
+		<div class="form-group pb-3">
+			<label for="username">Username:</label>
+			<input type="text" class="form-control" id="username" name="username" />
+		</div>
+		<div class="form-group pb-3">
+			<label for="password">Password:</label>
+			<input
+				type="password"
+				class="form-control"
+				id="password"
+				name="password" />
+		</div>
+		<button type="submit" class="btn btn-primary">Login</button>
+	</form>
+</div>
 {% endblock %}

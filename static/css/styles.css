@@ -1,121 +1,149 @@
 :root {
-  --colorYellow: #e1e723;
-  --colorBlack: black;
-  --colorGray: #5a5a5a;
-  --colorWhite: white;
+	--colorYellow: #e1e723;
+	--colorBlack: black;
+	--colorGray: #5a5a5a;
+	--colorWhite: white;
 }
 
 /* body element styling/common color styling/ misc elements */
 
 .gray-background-color {
-  background-color: var(--colorGray);
+	background-color: var(--colorGray);
 }
 
 .white-text-color {
-  color: var(--colorWhite);
+	color: var(--colorWhite);
 }
 
 .yellow-green-background-color {
-  background-color: var(--colorYellow);
+	background-color: var(--colorYellow);
 }
 
 .black-text-color {
-  color: var(--colorBlack);
+	color: var(--colorBlack);
 }
 
 /* setting styles for navbar on top and footer */
 
 ul li {
-  list-style-type: none;
+	list-style-type: none;
 }
 li a {
-  color: var(--colorBlack);
+	color: var(--colorBlack);
 }
 
 li a:hover {
-  color: var(--colorGray);
+	color: var(--colorGray);
 }
 
 /* tool and batery table page styling  */
 
 table {
-  width: 80%;
+	width: 80%;
 }
 
 table,
 th,
 td {
-  border-top: 1px solid;
+	border-top: 1px solid;
 }
 
 th,
 td {
-  padding: 1rem;
+	padding: 1rem;
 }
 
 tr:hover {
-  background-color: var(--colorYellow);
+	background-color: var(--colorYellow);
+}
+
+.battery-table {
+	margin-left: 5rem;
 }
 
 /* home page styling */
 
 .home-page-content {
-  padding: 2rem 2rem;
+	padding: 2rem 2rem;
 }
 
 .text-with-border {
-  font-family: sans-serif;
-  margin: 100px auto;
-  color: var(--colorBlack);
-  text-align: center;
-  font-size: 30px;
-  max-width: 600px;
-  position: relative;
+	font-family: sans-serif;
+	margin: 100px auto;
+	color: var(--colorBlack);
+	text-align: center;
+	font-size: 30px;
+	max-width: 600px;
+	position: relative;
 }
 
 .text-with-border:before {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 5px;
-  background: var(--colorYellow);
-  left: 0;
-  top: 50%;
-  position: absolute;
+	content: "";
+	display: block;
+	width: 180px;
+	height: 5px;
+	background: var(--colorYellow);
+	left: 0;
+	top: 50%;
+	position: absolute;
 }
 
 .text-with-border:after {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 5px;
-  background: var(--colorYellow);
-  right: 0;
-  top: 50%;
-  position: absolute;
+	content: "";
+	display: block;
+	width: 180px;
+	height: 5px;
+	background: var(--colorYellow);
+	right: 0;
+	top: 50%;
+	position: absolute;
+}
+
+/* login form css */
+
+.form-ryobi {
+	margin-left: 6rem;
+}
+
+/* register form css */
+
+.register-form {
+	width: 50%;
 }
 
 /* setting media query for site */
 
 @media screen and (max-width: 700px) {
-  /* home page media query styling */
+	/* home page media query styling */
 
-  .text-with-border {
-    font-size: 20px;
-  }
+	.text-with-border {
+		font-size: 20px;
+	}
 
-  .text-with-border:before {
-    width: 85px;
-  }
+	.text-with-border:before {
+		width: 85px;
+	}
 
-  .text-with-border:after {
-    width: 85px;
-  }
+	.text-with-border:after {
+		width: 85px;
+	}
 
-  /* my tools media query styling */
+	/* my tools media query styling */
 
-  th,
-  td {
-    padding: 0.5rem;
-  }
+	th,
+	td {
+		padding: 0.5rem;
+	}
+
+	/* table styling for battery and tool media query */
+
+	.battery-table {
+		margin-left: 0.5rem;
+	}
+
+	/* register form css media query */
+
+	.register-form {
+		width: 75%;
+	}
 }

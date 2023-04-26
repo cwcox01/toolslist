@@ -1,134 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    {% block title%}
-    <title>Home</title>
-    {% endblock %}
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23f7f7fa%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2290%22>⚒️</text></svg>"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		{% block title%}
+		<title>Home</title>
+		{% endblock %}
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23f7f7fa%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2290%22>⚒️</text></svg>" />
 
-    <!--protect-->
-    {% load static %}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/styles.css' %}"
-    />
-  </head>
-  <body>
-    <div
-      class="d-flex justify-content-end pe-3 gray-background-color pt-3 pb-3 white-text-color"
-    >
-      <h1>
-        <a class="text-white text-decoration-none" href="/">Cory's Tools</a>
-      </h1>
-    </div>
-    <div class="yellow-green-background-color d-flex flex-row">
-      <nav class="d-flex flex-row">
-        <ul class="d-flex flex-row pt-3 pb-3">
-          <li>
-            <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Tool List</a
-            >
-          </li>
-          {% if user.is_authenticated %}
-          <li>
-            <a
-              href="{% url 'profile' %}"
-              class="text-decoration-none ps-2 pe-2 black-text-color"
-              >{{ user.username }}</a
-            >
-          </li>
-          <li>
-            <a
-              href="{% url 'logout' %}"
-              class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Logout</a
-            >
-          </li>
-          {% else %}
-          <li>
-            <a
-              href="{% url 'login' %}"
-              class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Login</a
-            >
-          </li>
-          <li>
-            <a
-              href="{% url 'register' %}"
-              class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Register</a
-            >
-          </li>
-          {% endif %}
-          <li>
-            <a href="#" class="text-decoration-none ps-2 pe-2 black-text-color"
-              >Battery List</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    {% block content %} {% endblock %}
-    <div>
-      <footer>
-        <div
-          class="gray-background-color pt-4 pb-4 white-text-color d-flex flex-column align-items-center"
-        >
-          <p class="mb-0">Cory's Tools</p>
-          <p class="mb-0">Go Ryobi Tools!</p>
-          <p class="mb-0">
-            <a
-              class="text-decoration-none text-white"
-              href="mailto:cory@corycox.com"
-              >Email Me!</a
-            >
-          </p>
-        </div>
-        <div class="yellow-green-background-color pt-3 pb-3">
-          <ul class="d-flex flex-row justify-content-center">
-            <li>
-              <a class="nav-text text-decoration-none ps-2 pe-2" href=""
-                >Home</a
-              >
-            </li>
-            <li>
-              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
-                >Tool List</a
-              >
-            </li>
-            <li>
-              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
-                >Battery List</a
-              >
-            </li>
-            <li>
-              <a class="text-decoration-none black-text-color ps-2 pe-2" href=""
-                >Login</a
-              >
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/abe365b9ec.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+		<!--protect-->
+		{% load static %}
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{% static 'css/styles.css' %}" />
+	</head>
+	<body>
+		<div
+			class="d-flex justify-content-end pe-3 gray-background-color pt-3 pb-3 white-text-color">
+			<h1>
+				<a class="text-white text-decoration-none" href="/">Cory's Tools</a>
+			</h1>
+		</div>
+		<div class="yellow-green-background-color d-flex flex-row">
+			<nav class="d-flex flex-row">
+				<ul class="d-flex flex-row pt-3 pb-3">
+					{% if user.is_authenticated %}
+					<li>
+						<a
+							href="{% url 'profile' %}"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>{{ user.username }}</a
+						>
+					</li>
+					<li>
+						<a
+							href="{% url 'logout' %}"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>Logout</a
+						>
+					</li>
+					{% else %}
+					<li>
+						<a
+							href="{% url 'login' %}"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>Login</a
+						>
+					</li>
+					<li>
+						<a
+							href="{% url 'register' %}"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>Register</a
+						>
+					</li>
+					{% endif %}
+					<li>
+						<a
+							href="/battery"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>Battery List</a
+						>
+					</li>
+					<li>
+						<a
+							href="/tool"
+							class="text-decoration-none ps-2 pe-2 black-text-color"
+							>Tool List</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		{% block content %} {% endblock %}
+		<div>
+			<footer>
+				<div
+					class="gray-background-color pt-4 pb-4 white-text-color d-flex flex-column align-items-center">
+					<p class="mb-0">Cory's Tools</p>
+					<p class="mb-0">Ryobi One+ 18v</p>
+					<p class="mb-0">
+						<a
+							class="text-decoration-none text-white"
+							href="mailto:cory@corycox.com"
+							>Email Me!</a
+						>
+					</p>
+				</div>
+				<div class="yellow-green-background-color pt-3 pb-3">
+					<ul class="d-flex flex-row justify-content-center">
+						<li>
+							<a class="nav-text text-decoration-none ps-2 pe-2" href="/"
+								>Home</a
+							>
+						</li>
+						<li>
+							<a
+								class="text-decoration-none black-text-color ps-2 pe-2"
+								href="/tool"
+								>Tool List</a
+							>
+						</li>
+						<li>
+							<a
+								class="text-decoration-none black-text-color ps-2 pe-2"
+								href="/battery"
+								>Battery List</a
+							>
+						</li>
+						<li>
+							<a
+								class="text-decoration-none black-text-color ps-2 pe-2"
+								href="/login"
+								>Login</a
+							>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/abe365b9ec.js"
+			crossorigin="anonymous"></script>
+	</body>
 </html>

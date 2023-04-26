@@ -6,28 +6,33 @@
 <!--protect-->
 {% block content %}
 <div class="pb-5 pt-5 ps-5 my-tools-section">
-  <h2>Cory's Tools</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Brand</th>
-        <th>Type</th>
-        <th>Volts</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!--protect-->
-      {% for tool in tools %}
-      <tr>
-        <td>{{ tool.brand }}</td>
-        <td>{{ tool.tool_type }}</td>
-        <td>{{ tool.voltage }}</td>
-        <td>{{ tool.quantity }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+	<h2 class="pb-4">Cory's Tools</h2>
+	<!--protect-->
+	{% if user.is_authenticated %}
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Brand</th>
+					<th>Type</th>
+					<th>Volts</th>
+					<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--protect-->
+				{% for tool in tools %}
+				<tr>
+					<td>{{ tool.brand }}</td>
+					<td>{{ tool.tool_type }}</td>
+					<td>{{ tool.voltage }}</td>
+					<td>{{ tool.quantity }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{% endif %}
 </div>
+<!--protect-->
 {% endblock %}
