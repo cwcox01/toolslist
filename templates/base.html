@@ -5,19 +5,26 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<!-- default site title  -->
 		{% block title%}
 		<title>Home</title>
 		{% endblock %}
+
+		<!-- bootstrap styling -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous" />
+
+		<!-- icon for site -->
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23f7f7fa%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2290%22>⚒️</text></svg>" />
 
+		<!-- external css for pages  -->
 		<!--protect-->
 		{% load static %}
 		<link
@@ -25,7 +32,10 @@
 			type="text/css"
 			href="{% static 'css/styles.css' %}" />
 	</head>
+
+	<!-- body base.html content -->
 	<body>
+		<!-- site navbar -->
 		<div
 			class="d-flex justify-content-end pe-3 gray-background-color pt-3 pb-3 white-text-color">
 			<h1>
@@ -83,7 +93,11 @@
 				</ul>
 			</nav>
 		</div>
+		<!-- begin body content -->
+
 		{% block content %} {% endblock %}
+
+		<!-- begin footer content -->
 		<div>
 			<footer>
 				<div

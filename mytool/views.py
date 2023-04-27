@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Tool, Battery
 from django.shortcuts import render, redirect
-# from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import RegistrationForm
 

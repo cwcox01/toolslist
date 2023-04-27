@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
+<!--protect-->
+{% comment %} title for register page {% endcomment %}
 {% block title %}<title>Register</title>{% endblock %}
 
+<!--protect-->
+{% comment %} body content for register page {% endcomment %}
 <!--protect-->
 {% block content %}
 <div class="pt-4 pb-5 form">
@@ -18,7 +22,7 @@
             <span class="text-danger">{{ form.errors.email }}</span>
       {% endif %}
 			<!--protect-->
-      <label for="email">Password:</label>
+      <label class="pt-1" for="password">Password:</label>
 			{{ form.password1 }}
       {% if form.errors.password1 %}
             <span class="text-danger">{{ form.errors.password1 }}</span>
